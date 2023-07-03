@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="nav">
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <div id="coffee"></div>
+    <h3 id="coffee-price"></h3>
+    <div class="add">
+      <img src="img/add.png" alt="add">
+    </div>
+    <div id="cream"></div>
+    <h3 id="cream-price"></h3>
+    <div class="add">
+      <img src="img/add.png" alt="add">
+    </div>
+    <div id="sugar"></div>
+    <h3 id="sugar-price"></h3>
+
+    <h1 id="total-price">Total: $100</h1>
+  </div>
+
+  <footer>
+    copyright || 2023
+  </footer>
+
+  <script>
+    // Extract query parameters from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const coffeeSize = urlParams.get('coffee-size');
+    const coffeeCount = parseInt(urlParams.get('coffee'));
+    const creamsCount = parseInt(urlParams.get('creams'));
+    const sugarsCount = parseInt(urlParams.get('sugars'));
+
+    // Display images based on selected items
+    const coffeeImage = '<img src="img/tim.jfif">';
+    const creamsImage = '<img src="img/cream.jfif">';
+    const sugarsImage = '<img src="img/sugar.jfif">';
+
+    const coffee = document.getElementById('coffee');
+    const cream = document.getElementById('cream');
+    const sugar = document.getElementById('sugar');
+
+    const coffeePrice = document.getElementById('coffee-price');
+    const creamPrice = document.getElementById('cream-price');
+    const sugarPrice = document.getElementById('sugar-price');
+    const totalPrice = document.getElementById('total-price');
+
+    const coffeeP = 24;
+    const creamP = 2;
+    const sugarP = 1;
+
+    // Display coffee images
+    for (let i = 0; i < coffeeCount; i++) {
+      coffee.innerHTML += coffeeImage + '<br>';
+    }
+
+    // Display creams images
+    for (let i = 0; i < creamsCount; i++) {
+      cream.innerHTML += creamsImage;
+    }
+
+    // Display sugars images
+    for (let i = 0; i < sugarsCount; i++) {
+      sugar.innerHTML += sugarsImage;
+    }
+
+    // Display coffee price
+    coffeePrice.innerHTML = `Cost: $${coffeeP} * ${coffeeCount} + tax = $${coffeeP * coffeeCount + 5}`;
+
+    // Display cream price
+    creamPrice.innerHTML = `Cost: $${creamP} * ${creamsCount} + tax = $${creamP * creamsCount + 5}`;
+
+    // Display sugar price
+    sugarPrice.innerHTML = `Cost: $${sugarP} * ${sugarsCount} + tax = $${sugarP * sugarsCount + 5}`;
+
+    // Display total price
+    totalPrice.innerHTML = `Total: $${coffeeP * coffeeCount + creamP * creamsCount + sugarP * sugarsCount + 15}`;
+
+  </script>
+
+</body>
+
+</html>
