@@ -1,0 +1,124 @@
+body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #212529;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar li {
+            color: white;
+            float: left;
+            margin-right: 15px;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar-left,
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-right {
+            margin-left: auto;
+        }
+
+        .center-box hr {
+            background-color: black;
+        }
+
+        .center {
+
+            min-height: calc(100vh - 20px - 20px - 20px);
+        }
+
+        .center-box {
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+            margin: auto;
+            top: 20em;
+            position: relative;
+            justify-content: center;
+            
+        }
+
+        .center-box-buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+        }
+
+        .small-buttons {
+            display: flex;
+
+        }
+
+        .small-button {
+            padding: 6px 12px;
+            font-size: 14px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-top: auto;
+            padding: 3px;
+        }
+
+        .navbar-left,
+        footer .navbar-left {
+            color: #333;
+        }
+
+        footer.navbar li {
+            list-style: none;
+        }
+
+        .navbar-right,
+        footer .navbar-right {
+            color: #555;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
