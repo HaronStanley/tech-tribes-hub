@@ -1,0 +1,56 @@
+*{
+     margin: 0;
+     padding: 0;
+ }
+ .navbar {
+     background-color: #212529;
+     width: 100%;
+     padding: 10px;
+ }
+
+
+ .navbar li
+ {
+     list-style: none;
+ }
+
+ .navbar li a
+ {
+     color: white;
+     text-decoration: none;
+ }
+
+ .container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 20px;
+     border: 1px solid #ccc;
+     width: 200px;
+     border-radius: 10px;
+     align-items: center;
+     margin: auto;
+     top: 13em;
+     position: relative;
+ }
+
+ .middle-content input
+ {
+     border-radius: 5px;
+     height: 20px;
+ }
+
+ .middle-content button
+ {
+     color: white;
+     background-color: #0d6efd;
+     width: 45px;
+     height: 25px;
+     border-radius: 10px;
+     border-displ
+ }
+
+ .middle-content h2
+ {
+     
+ }
